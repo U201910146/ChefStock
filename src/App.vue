@@ -1,26 +1,22 @@
 <template>
-  <div>
+  <div id="app">
     <header>
       <div class="left">
         <h1>FoodStockOS</h1>
       </div>
       <div class="middle">
-        <router-link to="/presentation"><button>Presentation</button></router-link>
+        <router-link to="/homepage"><button>Homepage</button></router-link>
         <router-link to="/chefstock"><button>ChefStock</button></router-link>
-        <button>About Us</button>
-        <button>Plans</button>
+        <router-link to="/aboutus"><button>About Us</button></router-link>
+        <router-link to="/plans"><button>Plans</button></router-link>
       </div>
       <div class="right">
-        <button class="login">Log In</button>
-        <button class="signup">Sign Up</button>
+        <router-link to="/login"><button class="login">Log In</button></router-link>
+        <router-link to="/signup"><button class="signup">Sign Up</button></router-link>
       </div>
     </header>
-    <div class="main-content">
-      <h1>ChefStock</h1>
-      <p>This app aims to help the restaurants manage their stock. Track, manage, and optimize your inventory effortlessly.</p>
-      <button class="get-started">Get Started</button>
+    <router-view/>
     </div>
-  </div>
 </template>
 
 <script>
