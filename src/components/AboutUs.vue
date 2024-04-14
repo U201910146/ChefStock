@@ -1,7 +1,7 @@
 <template>
   <div class="team">
     <div class="member">
-      <img src="./path-to-image1.jpg" alt="Miembro 1">
+      <img src="./tomas.jpg" alt="Miembro 1">
       <h2>Tomas Ortiz Fajardo</h2>
     </div>
     <div class="member">
@@ -24,8 +24,15 @@
 </template>
 
 <script>
+import tomas from '@/assets/tomas.jpg';
+
 export default {
-  name: 'AboutUsPage'
+  name: 'AboutUsPage',
+  data(){
+    return{
+      tomas: tomas
+    }
+  }
 }
 </script>
 
