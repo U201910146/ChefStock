@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Bienvenido a FoodStockOS</h1>
+  <div class="container">
+    <h1 class="welcome-text">Bienvenido a FoodStockOS</h1>
   </div>
 </template>
 
@@ -11,5 +11,11 @@ export default {
 </script>
 
 <style scoped>
-
+.container {
+  display: flex;
+  justify-content: center;
+}
+.welcome-text {
+  text-align: left;
+}
 </style>

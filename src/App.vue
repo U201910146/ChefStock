@@ -1,27 +1,47 @@
 <template>
   <div id="app">
-    <header>
-      <div class="left">
+    <Toolbar class="header">
+      <template #start>
         <h1>FoodStockOS</h1>
-      </div>
-      <div class="middle">
-        <router-link to="/homepage"><button>Homepage</button></router-link>
-        <router-link to="/chefstock"><button>ChefStock</button></router-link>
-        <router-link to="/aboutus"><button>About Us</button></router-link>
-        <router-link to="/plans"><button>Plans</button></router-link>
-      </div>
-      <div class="right">
-        <router-link to="/login"><button class="login">Log In</button></router-link>
-        <router-link to="/signup"><button class="signup">Sign Up</button></router-link>
-      </div>
-    </header>
+      </template>
+      <template #center>
+        <router-link to="/homepage"><Button label="Homepage" /></router-link>
+        <router-link to="/chefstock"><Button label="ChefStock" /></router-link>
+        <router-link to="/plans"><Button label="Plans" /></router-link>
+        <router-link to="/aboutus"><Button label="About Us" /></router-link>
+      </template>
+      <template #end>
+        <router-link to="/login"><Button label="Log In" class="login" /></router-link>
+        <router-link to="/signup"><Button label="Sign Up" class="signup" /></router-link>
+      </template>
+    </Toolbar>
+    <div class="content">
     <router-view/>
     </div>
+    <Toolbar class="footer">
+      <template #start>
+        <router-link to="/homepage"><Button label="Homepage" /></router-link>
+        <router-link to="/chefstock"><Button label="ChefStock" /></router-link>
+        <router-link to="/plans"><Button label="Plans" /></router-link>
+        <router-link to="/aboutus"><Button label="About Us" /></router-link>
+      </template>
+      <template #end>
+        <p class="rights">2024 All rights reserved.</p>
+      </template>
+    </Toolbar>
+  </div>
 </template>
 
 <script>
+import Button from 'primevue/button';
+import Toolbar from 'primevue/toolbar';
+
 export default {
-  name: 'LandingPage'
+  name: 'LandingPage',
+  components: {
+    Button,
+    Toolbar
+  }
 }
 </script>
 
@@ -72,5 +92,23 @@ button {
   font-size: 16px;
   margin: 20px 0;
   cursor: pointer;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.right {
+  position: absolute;
+  right: 20px;
+}
+.right .rights {
+  font-size: 0.8em;
+}
+
+.content{
+  margin-bottom: 300px;
 }
 </style>
