@@ -1,11 +1,11 @@
 <template>
   <div class="team">
     <div class="member">
-      <img src="./tomas.jpg" alt="Miembro 1">
+      <img class="centered-image" src="../assets/tomas.jpg" alt="Tomas">
       <h2>Tomas Ortiz Fajardo</h2>
     </div>
     <div class="member">
-      <img src="./path-to-image2.jpg" alt="Miembro 2">
+      <img class="centered-image" src="../assets/joan.jpeg" alt="Tomas">
       <h2>Joan Jefferson Talizo Balbin</h2>
     </div>
     <div class="member">
