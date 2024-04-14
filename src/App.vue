@@ -1,47 +1,99 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div id="app">
+    <header>
+      <div class="left">
+        <h1>FoodStockOS</h1>
+      </div>
+      <div class="middle">
+        <router-link to="/homepage"><Button label ="HomePage"/></router-link>
+        <router-link to="/chefstock"><Button label ="ChefStock"/></router-link>
+        <router-link to="/plans"><Button label ="Plans"/></router-link>
+        <router-link to="/aboutus"><Button label ="About Us"/></router-link>
+      </div>
+      <div class="right">
+        <router-link to="/login"><Button label="Log In" class="login"/></router-link>
+        <router-link to="/signup"><Button label="Sign Up" class="signup"/></router-link>
+      </div>
+    </header>
+    <router-view/>
+    <Toolbar class="footer">
+      <template #start>
+        <router-link to="/homepage"><Button label="Homepage" /></router-link>
+        <router-link to="/chefstock"><Button label="ChefStock" /></router-link>
+        <router-link to="/plans"><Button label="Plans" /></router-link>
+        <router-link to="/aboutus"><Button label="About Us" /></router-link>
+      </template>
+      <template #end>
+        <p>2024 All rights reserved.</p>
+      </template>
+    </Toolbar>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
+<script>
+import Button from 'primevue/button';
+
+export default {
+  name: 'LandingPage',
+  components: {
+    Button,
+    Toolbar
+  }
+}
+</script>
+
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F4F0DF;
+  color: #494847;
+}
 header {
-  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f9fa;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.main-content {
+  text-align: left;
+  padding: 100px 50px;
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+button {
+  margin: 0 10px;
+}
+.login, .signup {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.signup {
+  background-color: #4CAF50; /* Green */
+}
+.get-started {
+  background-color: #ff6347; /* Tomato */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 </style>
+
