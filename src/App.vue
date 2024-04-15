@@ -11,6 +11,7 @@
         <router-link to="/aboutus"><Button label="About Us" /></router-link>
       </template>
       <template #end>
+        <SelectButton :options="languages" v-model="$i18n.locale" optionLabel="name" optionValue="code"></SelectButton>
         <router-link to="/login"><Button label="Log In" class="login" /></router-link>
         <router-link to="/signup"><Button label="Sign Up" class="signup" /></router-link>
       </template>
@@ -35,12 +36,22 @@
 <script>
 import Button from 'primevue/button';
 import Toolbar from 'primevue/toolbar';
+import SelectButton from "primevue/selectbutton";
 
 export default {
   name: 'LandingPage',
   components: {
     Button,
-    Toolbar
+    Toolbar,
+    SelectButton
+  },
+  data(){
+    return{
+      languages: [
+        { name: 'English', code: 'en' },
+        { name: 'Spanish', code: 'es' },
+      ]
+    }
   }
 }
 </script>

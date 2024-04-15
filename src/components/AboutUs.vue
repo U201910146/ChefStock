@@ -5,11 +5,11 @@
       <h2>Tomas Ortiz Fajardo</h2>
     </div>
     <div class="member">
-      <img class="centered-image" src="../assets/joan.jpeg" alt="Tomas">
+      <img class="centered-image" src="../assets/joan.jpeg" alt="Joan">
       <h2>Joan Jefferson Talizo Balbin</h2>
     </div>
     <div class="member">
-      <img src="./path-to-image3.jpg" alt="Miembro 3">
+      <img class="centered-image" src="../assets/jose.jpg" alt="Jose">
       <h2>José Daniel Mario Calderón Huamán</h2>
     </div>
     <div class="member">

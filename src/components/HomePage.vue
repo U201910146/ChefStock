@@ -3,6 +3,7 @@
     <h1 class="welcome-text">Bienvenido a FoodStockOS</h1>
     <div id="app">
     <img class="centered-image" src="../assets/inventariores.jpg" alt="Inventario">
+      <button class="get-started">{{ $t('getStarted') }}</button>
     </div>
   </div>
 </template>
