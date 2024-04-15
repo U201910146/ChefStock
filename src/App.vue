@@ -5,15 +5,15 @@
         <h1>FoodStockOS</h1>
       </template>
       <template #center>
-        <router-link to="/homepage"><Button label="Homepage" /></router-link>
-        <router-link to="/chefstock"><Button label="ChefStock" /></router-link>
-        <router-link to="/plans"><Button label="Plans" /></router-link>
-        <router-link to="/aboutus"><Button label="About Us" /></router-link>
+        <router-link to="/homepage"><Button :label="$t('Homepage')" /></router-link>
+        <router-link to="/chefstock"><Button :label="$t('ChefStock')" /></router-link>
+        <router-link to="/plans"><Button :label="$t('Plans')" /></router-link>
+        <router-link to="/aboutus"><Button :label="$t('AboutUs')" /></router-link>
       </template>
       <template #end>
         <SelectButton :options="languages" v-model="$i18n.locale" optionLabel="name" optionValue="code"></SelectButton>
-        <router-link to="/login"><Button label="Log In" class="login" /></router-link>
-        <router-link to="/signup"><Button label="Sign Up" class="signup" /></router-link>
+        <router-link to="/login"><Button :label="$t('LogIn')" class="login" /></router-link>
+        <router-link to="/signup"><Button :label="$t('SignUp')" class="signup" /></router-link>
       </template>
     </Toolbar>
     <div class="content">
@@ -21,10 +21,10 @@
     </div>
     <Toolbar class="footer">
       <template #start>
-        <router-link to="/homepage"><Button label="Homepage" /></router-link>
-        <router-link to="/chefstock"><Button label="ChefStock" /></router-link>
-        <router-link to="/plans"><Button label="Plans" /></router-link>
-        <router-link to="/aboutus"><Button label="About Us" /></router-link>
+        <router-link to="/homepage"><Button :label="$t('Homepage')" /></router-link>
+        <router-link to="/chefstock"><Button :label="$t('ChefStock')" /></router-link>
+        <router-link to="/plans"><Button :label="$t('Plans')" /></router-link>
+        <router-link to="/aboutus"><Button :label="$t('AboutUs')" /></router-link>
       </template>
       <template #end>
         <p class="rights">2024 All rights reserved.</p>

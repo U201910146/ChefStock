@@ -3,19 +3,30 @@
     <h1 class="welcome-text">Bienvenido a FoodStockOS</h1>
     <div id="app">
     <img class="centered-image" src="../assets/inventariores.jpg" alt="Inventario">
-      <button class="get-started">{{ $t('getStarted') }}</button>
+      <Button :label="$t('getStarted')" class="p-button-raised p-button-rounded p-button-success get-started-button"></Button>
     </div>
   </div>
 </template>
 
 <script>
+import Button from 'primevue/button';
 
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: {
+    Button
+  }
 }
 </script>
 
 <style scoped>
+.get-started-button{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -29,5 +40,8 @@ export default {
 .centered-image{
   width: 50%;
   height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>
